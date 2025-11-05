@@ -2,13 +2,16 @@
 
 ![a slightly askew welcome picture](assets/welcome.png)
 
-Nov 5, 2025
+###Nov 5, 2025
+
 Forked from rsheldiii/KeyV2:master to rename vars and modules with a leading digit in their names,
-as that is now deprecated in nightly builds. 
+as that is now deprecated in nightly builds, and generates a ton of warnings.
 
 No other changes to existing files, though there is a new file, "hybot_keys.scad", edited from
 keys.scad, to capture the settings for the custom keys I've made, and a a screenshot for it.
 ![Fuck It key for Central Computers' 39th anniversary key chain](assets/fuckit.png)
+
+---
 
 
 This library is a keycap and keyset construction library for mechanical keyboards, written in openSCAD.
