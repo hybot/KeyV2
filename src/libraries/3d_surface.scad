@@ -2,7 +2,7 @@
 
 include <../functions.scad>
 
-module 3d_surface(size=$3d_surface_size, step=$3d_surface_step, bottom=-SMALLEST_POSSIBLE){
+module k3d_surface(size=$k3d_surface_size, step=$k3d_surface_step, bottom=-SMALLEST_POSSIBLE){
   function p(x, y) = [ x, y, max(0,$surface_function(x, y) * $corner_smoothing_surface_function(x,y)) ];
   function p0(x, y) = [ x, y, bottom ];
   function rev(b, v) = b ? v : [ v[3], v[2], v[1], v[0] ];
@@ -76,4 +76,4 @@ module polar_3d_surface(size, step, bottom=-SMALLEST_POSSIBLE){
 
 // defaults, overridden in functions.scad
 // $surface_distribution_function = function(dim, size) sin(dim) * size;
-// $surface_function = function(x,y) (sin(acos(x/$3d_surface_size))) * sin(acos(y/$3d_surface_size));
+// $surface_function = function(x,y) (sin(acos(x/$k3d_surface_size))) * sin(acos(y/$k3d_surface_size));

@@ -10,9 +10,9 @@ function abs_sum(list, x=0) =
     x + abs(list[0]) :
     abs_sum([for (x = [1: len(list) - 1]) list[x]], x+abs(list[0]));
 
-function 2hands(index, total) = ((index+0.5) % (total/2)) - (total/4);
+function k2hands(index, total) = ((index+0.5) % (total/2)) - (total/4);
 function cresting_wave(index, total, mod=4) = (index < total/2) ? (((index + 0.5) / total)*mod) : -(mod - ((index + 0.5) / total * mod));
-function 1hand(index, total) = (index % (total)) - (total/2);
+function k1hand(index, total) = (index % (total)) - (total/2);
 
 
 // chooses between all the sculpting options
@@ -21,8 +21,8 @@ function 1hand(index, total) = (index % (total)) - (total/2);
 function double_sculpted_column(column, row_length, column_sculpt_profile) =
   (column*2 + 1 == row_length) ?
     0 : (column_sculpt_profile == "2hands") ?
-      2hands(column, row_length) : (column_sculpt_profile == "1hand") ?
-        1hand(column, row_length) : (column_sculpt_profile == "cresting_wave") ?
+      k2hands(column, row_length) : (column_sculpt_profile == "1hand") ?
+        k1hand(column, row_length) : (column_sculpt_profile == "cresting_wave") ?
           cresting_wave(column, row_length) : 0;
 
 module layout(list, profile="dcs", legends=undef, front_legends=undef, row_sculpting_offset=0, row_override=undef, column_sculpt_profile="2hands", column_override=undef) {

@@ -5,39 +5,39 @@ module u(u=1) {
   children();
 }
 
-module 1u() {
+module k1u() {
   u(1) children();
 }
 
-module 1_25u() {
+module k1_25u() {
   u(1.25) children();
 }
 
-module 1_5u() {
+module k1_5u() {
   u(1.5) children();
 }
 
-module 1_75u(){
+module k1_75u(){
   u(1.75) children();
 }
 
-module 2u() {
+module k2u() {
   u(2) children();
 }
 
-module 2_25u() {
+module k2_25u() {
   u(2.25) children();
 }
 
-module 2_50u() {
+module k2_50u() {
   u(2.5) children();
 }
 
-module 2_75u() {
+module k2_75u() {
   u(2.75) children();
 }
 
-module 6_25u() {
+module k6_25u() {
   u(6.25) children();
 }
 
@@ -48,30 +48,30 @@ module uh(u=1) {
   children();
 }
 
-module 1uh() {
+module k1uh() {
   uh(1) children();
 }
 
-module 2uh() {
+module k2uh() {
   uh(2) children();
 }
 
-module 1_25uh() {
+module k1_25uh() {
   uh(1.25) children();
 }
 
-module 1_5uh() {
+module k1_5uh() {
   uh(1.5) children();
 }
 
-module 2_25uh() {
+module k2_25uh() {
   uh(2.25) children();
 }
 
-module 2_75uh() {
+module k2_75uh() {
   uh(2.75) children();
 }
 
-module 6_25uh() {
+module k6_25uh() {
   uh(6.25) children();
 }

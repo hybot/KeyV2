@@ -209,9 +209,9 @@ $more_side_sculpting_factor = 0;
 
 // 3d surface settings
 // unused for now
-$3d_surface_size = 1;
-// 3d surface point resolution. $3d_surface_size / $3d_surface_step = steps per x / y
-$3d_surface_step = 1/20;
+$k3d_surface_size = 1;
+// 3d surface point resolution. $k3d_surface_size / $k3d_surface_step = steps per x / y
+$k3d_surface_step = 1/20;
 
 // monotonically increasing function that distributes the points of the surface mesh
 // only for polar_3d_surface right now
@@ -226,13 +226,13 @@ $surface_distribution_function = sinusoidal_surface_distribution;
 
 // debug
 // $surface_function = function(x,y) 1;
-cylindrical_surface = function(x,y) (sin(acos(x/$3d_surface_size)));
-spherical_surface = function(x,y) (1 - (x/$3d_surface_size)^2)^0.5 * (1 - (y/$3d_surface_size)^2)^0.5;
+cylindrical_surface = function(x,y) (sin(acos(x/$k3d_surface_size)));
+spherical_surface = function(x,y) (1 - (x/$k3d_surface_size)^2)^0.5 * (1 - (y/$k3d_surface_size)^2)^0.5;
 // looks a lot like mt3
-quartic_surface = function(x,y) (1 - (x/$3d_surface_size)^4)^0.5 * (1 - (y/$3d_surface_size)^4)^0.5;
+quartic_surface = function(x,y) (1 - (x/$k3d_surface_size)^4)^0.5 * (1 - (y/$k3d_surface_size)^4)^0.5;
 ripple_surface = function(x,y) cos((x^2+y^2)^0.5 * 50)/4 + 0.75; 
-rosenbrocks_banana_surface = function(x,y) (pow(1-(x/$3d_surface_size))^2 + 100 * pow((y/$3d_surface_size)-(x/$3d_surface_size)^2)^2)/200 + 0.1;
-spike_surface = function(x,y) 1/(((x/$3d_surface_size)^2+(y/$3d_surface_size)^2)^0.5) + .01;
+rosenbrocks_banana_surface = function(x,y) (pow(1-(x/$k3d_surface_size))^2 + 100 * pow((y/$k3d_surface_size)-(x/$k3d_surface_size)^2)^2)/200 + 0.1;
+spike_surface = function(x,y) 1/(((x/$k3d_surface_size)^2+(y/$k3d_surface_size)^2)^0.5) + .01;
 random_surface = function(x,y) sin(rands(0,90,1,x+y)[0]);
 bumps_surface = function(x,y) sin(20*x)*cos(20*y)/3+1;
 
@@ -240,7 +240,7 @@ $surface_function = bumps_surface; // bumps_surface;
 
 // can be used to smooth the corners of the 3d surface function, to make the dishes add / subtract less height. can really do anything it's just multiplying, but that's what I use it for
 $corner_smoothing_surface_function = function(x,y) 1;
-// $corner_smoothing_surface_function = function(x,y) (1 - pow(abs(x), 5)/$3d_surface_size) * (1 - pow(abs(y),5)/$3d_surface_size);
+// $corner_smoothing_surface_function = function(x,y) (1 - pow(abs(x), 5)/$k3d_surface_size) * (1 - pow(abs(y),5)/$k3d_surface_size);
 
 // ripples
 /* 

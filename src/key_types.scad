@@ -5,27 +5,27 @@ use <key_transformations.scad>
 module spacebar() {
   $inverted_dish = $dish_type != "disable";
   $dish_type = $dish_type != "disable" ? "sideways cylindrical" : "disable";
-  6_25u() stabilized(mm=50) children();
+  k6_25u() stabilized(mm=50) children();
 }
 
 module lshift() {
-  2_25u() stabilized() children();
+  k2_25u() stabilized() children();
 }
 
 module rshift() {
-  2_75u() stabilized() children();
+  k2_75u() stabilized() children();
 }
 
 module backspace() {
-  2u() stabilized() children();
+  k2u() stabilized() children();
 }
 
 module enter() {
-  2_25u() stabilized() children();
+  k2_25u() stabilized() children();
 }
 
 module numpad_enter() {
-  2uh() stabilized(vertical=true) children();
+  k2uh() stabilized(vertical=true) children();
 }
 
 module numpad_plus() {
