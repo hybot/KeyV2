@@ -7,12 +7,23 @@
 Forked from rsheldiii/KeyV2:master to rename vars and modules with a leading digit in their names,
 as that is now deprecated in nightly builds, and generates a ton of warnings.
 
-No other changes to existing files, though there is a new file, "hybot_keys.scad", edited from
-keys.scad, to capture the settings for the custom keys I've made, and a screenshot for it.
+Note that "customizer.scad" is still horribly broken in development builds. This stems from a
+basic change in how the developer builds work, and how customizer.scad is generated, which assumes
+these warnings will be ignored or not generated. Since this file is primarily for use in the
+Thingiverse customizer, which uses an ancient, basterdized version of OpenSCAD, I've left it alone.
+
+So if you're reading this, ignore the instructions in the original README (below) on using OpenSCAD
+Customizer. Insted use the "recommended way", editing "keys.scad" (or a copy of it), which works
+fine now, and only requires minimal coding to get you custom keys.
+
+There are no other changes to existing files, though there is a new file, "hybot_keys.scad",
+edited from keys.scad, which can serve as an additonal example, plus adds more customizer options.
+There is also a screenshot for it:
 ![Fuck It key for Central Computers' 39th anniversary key chain](assets/fuckit.png)
 
-The the settings in hybot_keys.scad are intended for an SLA (resin) printer, and are probably
-not suitable for an FDM printer.
+The the settings in hybot_keys.scad are intended for an SLA (resin) printer, especially $fn and
+possibly the font size, and are probably not suitable for an FDM printer. If you don't have a fast
+computer it may take 10 to 20 seconds for the first render.
 
 ---
 
