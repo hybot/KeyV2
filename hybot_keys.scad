@@ -36,10 +36,7 @@ LED_hole=false;
 // we're resin printing, not FDM, but more than 360 will bump render time quite a bit.
 $fn=360;
 
-// example key
-//dcs_row(5) legend("⇪", size=9) key();
-
-// my custom key, with a 2 line legend, and mostly flat.
+// my custom key, with a 2 line legend, and mostly flat. with optional LED hole
 difference() {
   sa_row(3) {
     $total_depth = 9;
